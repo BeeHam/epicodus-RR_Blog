@@ -1,0 +1,15 @@
+<h1><%= @post.title %></h1>
+<h3>by <%= @post.author %>, <%= distance_of_time_in_words(@post.created_at, Time.now) %> ago</h3>
+
+<p>
+  <%= @post.content %>
+</p>
+<hr>
+<h4>Tags</h4>
+<ul>
+  <% @post.tags.each do |tag| %>
+  <li><%= tag.name %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Tag this", new_post_tag_path(@post) %>
