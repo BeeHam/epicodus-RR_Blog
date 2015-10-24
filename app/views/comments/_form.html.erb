@@ -1,6 +1,7 @@
 <%= form_for [@post, @comment] do |f| %>
   <%= f.label :content %>
   <%= f.text_area :content, cols: 40, rows: 10  %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
   <br>
   <%= f.submit "Submit" %>
 <% end %>
