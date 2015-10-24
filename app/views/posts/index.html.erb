@@ -6,6 +6,7 @@
     <ul>
       <li><%= truncate(post.content, length: 100, separator: ' ') %></li>
     </ul>
+    Tags: <%= post.tag_list %>
   </li>
   <% end %>
 </ul>
