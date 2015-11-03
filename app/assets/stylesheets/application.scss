@@ -16,3 +16,14 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@font-face {
+  font-family: 'ocra';
+  src: url('OCRA.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'ocra';
+}
