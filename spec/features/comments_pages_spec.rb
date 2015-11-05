@@ -16,15 +16,15 @@ describe "the comment CRUD process" do
     expect(page).to have_content "Test content"
   end
 
-  # it "deletes a comment", js: true do
-  #   login_user
-  #   visit post_path(@post)
-  #   click_link "Add a comment"
-  #   fill_in "Content", with: "Test content"
-  #   click_on "Submit"
-  #   click_link "Delete"
-  #   expect(page).to have_no_content("Test content")
-  # end
+  it "deletes a comment", js: true do
+    login_user
+    visit post_path(@post)
+    click_link "Add a comment"
+    fill_in "Content", with: "Test content"
+    click_on "Submit"
+    click_link "Delete"
+    expect(page).to have_no_content("Test content")
+  end
 
   it "edits a comment" do
     login_user
